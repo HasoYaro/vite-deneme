@@ -6,7 +6,6 @@ import {dbFunctions} from '../main/database/database'
 let openDb = async () => {
   let succ = [];
   let dbs = process.env.DATABASES.split(',')
-  console.log(dbs)
 
   for(const db of dbs){
       succ.push(await new dbFunctions(db).openDb().then((res) => {return res}))

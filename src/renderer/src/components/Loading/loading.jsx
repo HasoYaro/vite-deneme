@@ -12,15 +12,14 @@ export default function Loading(){
     const [isDbsOpened, setIsDbOpened] = useState(false);
     const [isLoadingFinished, setIsLoadingFinished] = useState(false);
 
-    if(isDbsOpened) setTimeout(() => {
+    if(isDbsOpened && updateState === 'updateNotFound') setTimeout(() => {
         window.Api.loadingStateChanger('Finished')
     }, 2000);
 
     window.Api.openDb().then((res) => setIsDbOpened(res))
-    console.log('Db State: '+isDbsOpened)
+
 
     window.Api.updateStater((e,res) => setUpdateState(res))
-    console.log('Update State: '+updateState)
 
     return (<>
     <div className="parent">
