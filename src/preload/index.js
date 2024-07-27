@@ -1,4 +1,4 @@
-const { contextBridge, ipcRenderer } = require('electron')
+const { app, contextBridge, ipcRenderer } = require('electron')
 require('dotenv').config()
 import {dbFunctions} from '../main/database/database'
 
@@ -41,7 +41,9 @@ contextBridge.exposeInMainWorld('Api', {
   updateStater: (callback) => {ipcRenderer.on('updateState', callback)},
   loadingStater: (callback) => {ipcRenderer.on('loadingState', (e, s) => callback(s))},
   loadingStateChanger: (message) => ipcRenderer.send('loadingStateChanger', message),
-
+  getVersion: (callback) => {ipcRenderer.on('getVersion', callback)},
+  
+  
   openDb: () => openDb(),
   getAllData: (db) => getAllData(db),
   getSpecificData: (db, id) => getSpecificData(db, id),

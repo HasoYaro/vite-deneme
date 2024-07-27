@@ -7,7 +7,9 @@ import React, { useState, useEffect } from 'react';
 export default function Loading(){
     const {t} = useTranslation()
 
+
     const [updateState, setUpdateState] = useState('')
+    const [version, setVersion] = useState('')
 
     const [isDbsOpened, setIsDbOpened] = useState(false);
     const [isLoadingFinished, setIsLoadingFinished] = useState(false);
@@ -20,12 +22,14 @@ export default function Loading(){
 
 
     window.Api.updateStater((e,res) => setUpdateState(res))
+    window.Api.getVersion((e,res) => setVersion(res))
+    console.log(version)
 
     return (<>
     <div className="parent">
         <div className="loader"></div>
         <div className="p"><p>{t('loading')}</p></div>
-        <div><p id="updateState">{t(updateState)}</p></div>
+        <div><p id="updateState">{t(updateState)+' v'+version}</p></div>
 
     </div>
     </>)

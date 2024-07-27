@@ -12,20 +12,20 @@ i18next
         en: {
             translation: {
                 loading: 'Loading',
-                updateCheck: 'Checking for updates...',
-                updateFound: 'Update found! Will be downloaded after you close the app.',
-                updateNotFound: 'Your app is up to date.',
-                updateDownloaded: 'Update is downloaded.',
+                updateCheck: 'Checking for updates... Current version is',
+                updateFound: 'Update found! Will be downloaded after you close the app. Current version is',
+                updateNotFound: 'Your app is up to date. Current version is',
+                updateDownloaded: 'Update is downloaded. Current version is',
                 play: 'Play'
             }
         },
         tr: {
             translation: {
                 loading: 'Yükleniyor',
-                updateCheck: 'Guncellemeler kontrol ediliyor...',
-                updateFound: 'Guncelleme bulundu! Programi kapattiksan sonra indirilecek.',
-                updateNotFound: 'Programiniz guncel.',
-                updateDownloaded: 'Guncelleme indirildi.',
+                updateCheck: 'Guncellemeler kontrol ediliyor... Su an ki surum',
+                updateFound: 'Guncelleme bulundu! Programi kapattiksan sonra indirilecek. Su an ki surum',
+                updateNotFound: 'Programiniz guncel. Su an ki surum',
+                updateDownloaded: 'Guncelleme indirildi. Su an ki surum',
                 play: 'Oyna'
             }
         }

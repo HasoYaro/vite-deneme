@@ -72,6 +72,7 @@ app.whenReady().then(() => {
   mainWindow.webContents.on('did-finish-load', function () {
     mainWindow.webContents.send('loadingState', 'Loading');
     mainWindow.webContents.send('updateState', 'updateCheck');
+    mainWindow.webContents.send('getVersion', app.getVersion());
 
   });
 
