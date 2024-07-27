@@ -17,7 +17,7 @@
     "build:mac": "npm run build && electron-builder --mac",
     "build:linux": "npm run build && electron-builder --linux"
   },
-  "repository": "https://github.com/HasoYaro/electron-react-deneme",
+  "repository": "https://github.com/HasoYaro/vite-deneme",
   "publish": {
     "provider": "github",
     "releaseType": "release"
